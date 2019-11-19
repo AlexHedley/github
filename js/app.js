@@ -9,6 +9,14 @@ myApp.controller('myController', function ($scope, $http) {
         });
     }
     
+    $scope.OpenRepository = (repo) => {
+        window.open(repo.html_url);
+    }
+
+    $scope.OpenRepositoryHomepage = (repo) => {
+        window.open(repo.homepage);
+    }
+    
     $scope.init = () => {
         loadRepos();
     };
